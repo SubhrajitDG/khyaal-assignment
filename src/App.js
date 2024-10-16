@@ -1,4 +1,4 @@
-import { Animation, Root } from "@bsmnt/scrollytelling";
+import { Root } from "@bsmnt/scrollytelling";
 import Hero from "./components/hero";
 import Clients from "./components/clients";
 import Features from "./components/features";

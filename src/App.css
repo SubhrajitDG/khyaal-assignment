@@ -1,38 +1,209 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    color: #4d4476;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    background-color: #f5f5f7;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+h1 {
+    font-size: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p {
+    font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+    background-color: #1cc283;
+    padding: 9px 17px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#root {
+    overflow: hidden;
+}
+
+
+.header {
+    border-bottom: 1px solid #CECCEC;
+}
+
+.maxWidth {
+    max-width: 1080px;
+    margin-inline: auto;
+}
+
+.header .headerInner {
+    display: flex;
+    height: 85px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.header .links {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+}
+
+.hero .heroInner {
+    padding-top: 130px;
+    display: flex;
+}
+
+.hero .left {
+    gap: 40px;
+    display: flex;
+    max-width: 540px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero .right {
+    width: 100%;
+    height: 440px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 20;
+}
+
+.hero .right img {
+    width: 70%;
+    top: 20px;
+    position: absolute;
+    z-index: 20;
+    background: transparent;
+}
+
+/* .mainCard {
+    position: absolute;
+    top: -15px;
+    width: 300px;
+    height: 500px;
+    background: linear-gradient(0deg, rgba(70, 58, 143, 1) 5%, rgba(100, 78, 196, 1) 100%);
+    ;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    transform: rotate3d(11, -31, 14, 7deg);
+} */
+
+.card {
+    position: absolute;
+    /* top: 123px; */
+    top: 3%;
+    /* right: 210px; */
+    right: 22%;
+    width: 300px;
+    height: 500px;
+    background: linear-gradient(0deg, rgba(70, 58, 143, 1) 5%, rgba(100, 78, 196, 1) 100%);
+    ;
+    border-radius: 20px;
+    transform: rotate3d(10, -41, 44, 8deg);
+    z-index: 10;
+}
+
+.clients,
+.clients * {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 61%, rgba(247, 247, 248, 1) 100%);
+
+}
+
+.clients {
+    position: relative;
+    perspective: 2000px;
+    margin-top: 350px;
+}
+
+.clients::before {
+    content: '';
+    position: absolute;
+    top: -180%;
+    left: 0;
+    display: block;
+    border-radius: 70px;
+    transform: rotateZ(180deg);
+    background-color: white;
+    width: 100%;
+    height: 1800px;
+    transform: rotateX(61deg) rotateZ(-70deg);
+}
+
+.clientsInner {
+    max-width: 900px;
+    padding-top: 100px;
+    position: relative;
+    z-index: 10;
+
+}
+
+.clientsInner h2 {
+    max-width: 630px;
+    font-size: 30px;
+    line-height: 48px;
+    letter-spacing: -0.28125px;
+}
+
+.clients .clientsLogos {
+    display: flex;
+    position: absolute;
+    left: 20%;
+    top: -33%;
+    align-items: center;
+    justify-content: space-between;
+    width: 720px;
+    z-index: 11;
+}
+
+.features {
+    padding-block: 200px;
+    position: relative;
+    height: 150vh;
+}
+
+.purple-bg {
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    top: 850px;
+    width: 16vw;
+    height: 36vw;
+    max-width: 202px;
+    max-height: 520px;
+    background-color: #2a206a;
+    z-index: 10;
+    border-radius: 13px;
+    transform: translate3d(-0.635721vw, 9px, 0px) rotate(59.3269deg) scale(1.08174) skew(0deg, -26deg);
+    /* transform: translate3d(-69.6468vw, 483px, 0px) rotate(94.8184deg) scale(9.95459) skew(0deg, -26deg); */
+    ;
+}
+
+.featuresInner p {
+    font-size: 40px;
+    max-width: 630px;
+}
+
+.featuresInner span {
+    display: block;
+    max-width: 450px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.experience-section {
+    position: relative;
+    height: 200vh;
 }

@@ -30,7 +30,7 @@ const Clients = () => {
           srcset=''
         />
       </div>
-      <div className='clientsInner maxWidth'>
+      <div className='clientsInner'>
         <h2>
           From global enterprises to booming startups, innovators count on
           Marqeta.

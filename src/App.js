@@ -6,13 +6,8 @@ import Experience from "./components/experience";
 
 function App() {
   return (
-    <Root scrub={0.4} debug>
-      <div
-        style={{
-          position: "relative",
-          perspective: "2000px",
-        }}
-      >
+    <Root scrub={0.4}>
+      <div className='sectionWrapper'>
         <Animation
           tween={[
             {
@@ -28,14 +23,14 @@ function App() {
               start: 55,
               end: 85,
               to: {
-                top: "72%",
+                top: "65.9%",
                 transform:
-                  "translate(-690px, 800px) rotate3d(0, 0, 1, 220deg) scale(0.8) skew(-65deg, 0deg)",
+                  "translate(-530px, 820px) rotate3d(0, 0, 1, 220deg) scale(0.8) skew(-50deg, 0deg)",
               },
             },
             {
-              start: 62,
-              end: 63,
+              start: 64,
+              end: 65,
               to: {
                 opacity: 0,
               },
@@ -47,38 +42,9 @@ function App() {
         <Hero />
         <Clients />
         <Features />
+        <Experience />
       </div>
-      {/* <Experience /> */}
     </Root>
-    // <Root
-    //   disabled={false}
-    //   // key={}
-    //   // debug={{ label: "texts" }}
-    // >
-    //   <div style={{ height: "200vh", background: "black" }}>
-    //     <div style={{ position: "sticky", top: 0, left: 0 }}>
-    //       <Animation
-    //         tween={{
-    //           start: 0,
-    //           end: 100,
-    //           to: { scale: 1.5 },
-    //         }}
-    //       >
-    //         <h1
-    //           style={{
-    //             margin: 0,
-    //             width: "100%",
-    //             fontSize: "5rem",
-    //             transformOrigin: "top left",
-    //             color: "red",
-    //           }}
-    //         >
-    //           This is a text
-    //         </h1>
-    //       </Animation>
-    //     </div>
-    //   </div>
-    // </Root>
   );
 }
 

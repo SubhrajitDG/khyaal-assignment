@@ -3,7 +3,7 @@ import React from "react";
 
 const Testimonial = () => {
   return (
-    <Root scrub={0.4} debug>
+    <Root scrub={0.4}>
       <div className='testimonialWrapper'>
         <div className='testimonial'>
           <div className='testimonialContent maxWidth'>

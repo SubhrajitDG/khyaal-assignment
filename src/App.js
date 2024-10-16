@@ -1,8 +1,8 @@
-import { Animation, Pin, Root } from "@bsmnt/scrollytelling";
+import { Animation, Root } from "@bsmnt/scrollytelling";
 import Hero from "./components/hero";
 import Clients from "./components/clients";
 import Features from "./components/features";
-import Experience from "./components/experience";
+import Testimonial from "./components/testimonial";
 
 function App() {
   return (
@@ -12,25 +12,34 @@ function App() {
           tween={[
             {
               start: 0,
-              end: 55,
+              end: 14,
               to: {
-                top: "45%",
+                top: "17%",
+                transform:
+                  "translateX(100px) rotate3d(0, 0, 1, -130deg) scale(0.5)",
+              },
+            },
+            {
+              start: 14,
+              end: 18,
+              to: {
+                top: "20%",
                 transform:
                   "translateX(100px) rotate3d(0, 0, 1, 210deg) scale(0.5)",
               },
             },
             {
-              start: 55,
-              end: 85,
+              start: 20,
+              end: 25,
               to: {
-                top: "65.9%",
+                top: "25%",
                 transform:
-                  "translate(-530px, 820px) rotate3d(0, 0, 1, 220deg) scale(0.8) skew(-50deg, 0deg)",
+                  "translate(-470px, 855px) rotate3d(0, 0, 1, 220deg) scale(0.8) skew(-46deg, 0deg)",
               },
             },
             {
-              start: 64,
-              end: 65,
+              start: 21.9,
+              end: 22,
               to: {
                 opacity: 0,
               },
@@ -42,7 +51,7 @@ function App() {
         <Hero />
         <Clients />
         <Features />
-        <Experience />
+        <Testimonial />
       </div>
     </Root>
   );

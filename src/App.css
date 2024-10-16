@@ -35,7 +35,7 @@ button {
 
 .sectionWrapper {
     position: relative;
-    perspective: 2000px;
+    perspective: 4000px;
     color: #4d4476;
 }
 
@@ -93,9 +93,42 @@ button {
     background: transparent;
 }
 
+.box2,
+.box3,
+.box4 {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.836);
+    border-radius: 14px;
+    z-index: 50;
+}
+
+.box2 {
+    width: 150px;
+    height: 80px;
+    top: 190px;
+    left: 110px;
+    transform-origin: bottom right;
+}
+
+.box3 {
+    width: 210px;
+    height: 150px;
+    top: 330px;
+    left: 140px;
+    transform-origin: top right;
+}
+
+.box4 {
+    width: 200px;
+    height: 230px;
+    top: 230px;
+    right: -40px;
+    transform-origin: bottom left;
+}
+
 .card {
     position: absolute;
-    top: 3%;
+    top: 1%;
     right: 22%;
     width: 300px;
     height: 500px;
@@ -160,21 +193,21 @@ button {
 }
 
 .features {
-    padding-block: 200px;
+    padding-top: 200px;
     position: relative;
-    height: 150vh;
+    min-height: 150vh;
 }
 
 .purple-bg {
     position: absolute;
     opacity: 0;
-    left: 50%;
-    top: 850px;
+    left: 47.5%;
+    top: 1025px;
     width: 16vw;
     height: 36vw;
     max-width: 202px;
     max-height: 520px;
-    background-color: #2a206a;
+    background: #2a206a;
     z-index: 10;
     border-radius: 13px;
     transform: translate3d(-0.635721vw, 9px, 0px) rotate(59.3269deg) scale(1.08174) skew(0deg, -26deg);
@@ -193,19 +226,18 @@ button {
     line-height: 30px;
 }
 
-/* .experienceSection {
+.contentWrapper {
     position: relative;
-    background-color: #2a206a;
+    background: #2a206a;
     z-index: 10;
     color: #ffffff;
-} */
+    margin-top: 400px;
+    padding-top: 300px;
+    opacity: 0;
+}
 
 .content {
-    position: relative;
-    background-color: #2a206a;
-    z-index: 10;
     color: #ffffff;
-    margin-top: 800px;
     width: 540px;
     font-size: 40px;
     display: flex;
@@ -219,6 +251,157 @@ button {
     margin-bottom: 50px;
 }
 
-.content p {
-    max-width: 324px;
+.contentWrapper .card2 {
+    position: absolute;
+    top: 10%;
+    left: 22%;
+    width: 300px;
+    height: 500px;
+    background: linear-gradient(0deg, rgba(70, 58, 143, 1) 5%, rgba(100, 78, 196, 1) 100%);
+    border-radius: 20px;
+    transform: rotate3d(17, 26, 11, 330deg);
+    z-index: 10;
+}
+
+.contentWrapper .results {
+    margin-top: 600px;
+    position: relative;
+
+}
+
+.results .metrics {
+    text-align: right;
+    max-width: 650px;
+    margin: 0 15% 0 auto;
+    transform: translateY(250px);
+}
+
+.results .metrics * {
+    transform: translateY(50px);
+    opacity: 0
+}
+
+.results .metrics h2 {
+    font-size: 80px;
+    color: #1cc283;
+}
+
+.results .metrics p {
+    max-width: none;
+}
+
+.results .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 365px);
+    column-gap: 20px;
+    row-gap: 20px;
+    max-height: 1940px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 290px;
+    margin-top: -500px;
+}
+
+.results .grid .soloCard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 365px;
+    height: 550px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.results .grid .gridItem {
+    height: 550px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.testimonialWrapper {
+    overflow: hidden;
+    background-color: #fff;
+    padding-top: 300px;
+    padding-inline: 200px;
+}
+
+.testimonial {
+    display: flex;
+}
+
+.testimonial .testimonialContent {
+    display: flex;
+    flex-direction: column;
+    gap: 350px;
+}
+
+.testimonial .cardWrapper {
+    width: 630px;
+    position: relative;
+}
+
+.cardWrapper .card3 {
+    position: absolute;
+    top: 0%;
+    width: 500px;
+    height: 300px;
+    background: linear-gradient(0deg, rgb(228, 228, 228) 5%, rgb(245, 245, 245) 100%);
+    border-radius: 20px;
+    transform: rotateY(0deg);
+    z-index: 10;
+    margin-top: 50px;
+}
+
+.testimonial .review {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.testimonial .review h3 {
+    font-size: 40px;
+}
+
+.testimonial .review h6 {
+    font-size: 22px;
+}
+
+.footer .footerBg {
+    width: 16vw;
+    height: 36vw;
+    max-width: 202px;
+    max-height: 520px;
+    background: linear-gradient(180deg, #2a206a, #2a206a 38%, #443794 70%, #443794);
+    border-radius: 13px;
+    transform: translate3d(-32.6468vw, 2183px, 0px) rotate(38deg) scale(9.95459) skew(0deg, -29deg);
+    position: relative;
+    z-index: 0;
+}
+
+.footer .ctaWrapper {
+    position: relative;
+    z-index: 1;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.footer .ctaWrapper .text {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.footer .ctaWrapper h4 {
+    font-size: 50px;
+}
+
+.footer .ctaWrapper img {
+    width: 485px;
+    margin-top: -300px;
+    margin-right: -100px;
 }
